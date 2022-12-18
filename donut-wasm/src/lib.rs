@@ -1,5 +1,7 @@
 use wasm_bindgen::prelude::*;
 
+const SYMBOLS: &str = ".,-~:;=!*#$@";
+
 #[wasm_bindgen]
 pub fn main(angle_a: f32, angle_b: f32) -> String {
 
@@ -27,7 +29,7 @@ pub fn main(angle_a: f32, angle_b: f32) -> String {
 
                 if y < 22 && x < 79 && d > depth_buffer[o] {
                     depth_buffer[o] = d;
-                    output_buffer[o] = (".,-~:;=!*#$@").chars().nth(n as usize).or(Some(' ')).unwrap();
+                    output_buffer[o] = SYMBOLS.chars().nth(n as usize).or(Some(' ')).unwrap();
                 }
             }
         }

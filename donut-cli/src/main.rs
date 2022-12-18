@@ -3,6 +3,8 @@ use std::{
     thread::sleep
 };
 
+const SYMBOLS: &str = ".,-~:;=!*#$@";
+
 fn main() {
     let mut angle_a: f32 = 1.;
     let mut angle_b: f32 = 1.;
@@ -36,7 +38,7 @@ fn main() {
 
                 if y < 22 && x < 79 && d > depth_buffer[o] {
                     depth_buffer[o] = d;
-                    output_buffer[o] = (".,-~:;=!*#$@").chars().nth(n as usize).or(Some(' ')).unwrap();
+                    output_buffer[o] = SYMBOLS.chars().nth(n as usize).or(Some(' ')).unwrap();
                 }
             }
         }
