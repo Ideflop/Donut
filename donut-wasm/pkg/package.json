@@ -1,0 +1,12 @@
+{
+  "name": "donut",
+  "version": "0.1.0",
+  "files": [
+    "donut_bg.wasm",
+    "donut.js",
+    "donut.d.ts"
+  ],
+  "module": "donut.js",
+  "types": "donut.d.ts",
+  "sideEffects": false
+}
